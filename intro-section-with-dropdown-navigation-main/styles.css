@@ -1,0 +1,294 @@
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    
+}
+
+
+.attribution { 
+    font-size: 0.7em; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body {
+    background-color: var(--Almost-White);
+    color: var(--Almost-Black);
+    font-size: 1.25em;
+}
+
+button {
+    background-color: var(--Almost-White);
+    border: none;
+    font-size: 0.9375em;
+    cursor: pointer;
+    color: var(--Medium-Gray);
+    font-size: 0.89em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 16px 24px;
+    & .hamburger-menu {
+    cursor: pointer;
+    }
+    & nav {
+    color: var(--Medium-Gray);
+    display: none;
+    & .back{  
+        background-color: var(--Medium-Gray);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 810px;
+        opacity: 0.75;
+    }
+    & .front {
+        background-color: var(--Almost-White);
+        width: 240px;
+        position: absolute;
+        right: 0;
+        height: 810px;
+        padding: 20px;
+        top: 0;
+    }
+    & .close-container {
+        text-align: right;
+        cursor: pointer;
+    }
+    & li {
+        list-style: none;
+        cursor: pointer;
+        margin-bottom: 22px;
+    }
+    & .features-ul, .company-ul {
+        margin-left: 28px;
+        display: none;
+    }
+    & .submenu {
+        width: 110px;
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+    }
+    & .btn-container {
+        position: absolute;
+        bottom: 130px;
+    }
+    & .btnlog {
+        display: block;
+        margin: 0 auto 16px;
+    }
+    & .btnreg {
+        border: 1px solid var(--Almost-Black);
+        display: block;
+        margin: 0 auto;
+        width: 195px;
+        height: 45px;
+        border-radius: 14px;
+    }
+    }
+}
+
+main {
+        display: flex;
+        flex-direction: column-reverse;
+    } & .hero-image {
+        width: 100%;
+        margin-bottom: 46px;
+    } & h2 {
+        text-align: center;
+        font-size: 2.25em;
+        margin-bottom: 16px;
+    } & p {
+        text-align: center;
+        line-height: 26px;
+        color: var(--Medium-Gray);
+        font-size: 1rem;
+        margin: 0 16px 24px;
+    }
+    & .learn {
+        background-color: var(--Almost-Black);
+        color: var(--Almost-White);
+        width: 136px;
+        height: 48px;
+        border-radius: 15px;
+        display: block;
+        margin: 50px auto;
+        margin-bottom: 52px;
+        &:hover {
+            background-color: var(--Almost-White);
+            color: var(--Almost-Black);
+            border: 1px solid var(--Almost-Black);
+        }
+    }
+    & .logos-container {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+    & .data {
+        width: 81px;
+    }
+    & .audio {
+        width: 52px;
+    }
+    & .meet {
+        width: 64px;
+    }
+    & .maker {
+        width: 59px;
+    }
+
+@media (min-width: 768px) {
+    header {
+    & .hamburger-menu {
+        display: none;
+    }
+    & nav {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-left: 24px;
+        & .back {
+            display: none;
+        }
+        & .front {
+            position: static;
+            width: 100%;    
+            display: flex;       
+            height: 100%;
+            padding: 0;
+            justify-content: space-between;
+        }
+        & .close-container {
+            display: none;
+        }
+        & ul {
+            display: flex;
+            align-items: center;
+            width: 378px;
+            justify-content: space-between;
+        }
+        & li {
+            margin: 0;
+        }
+        & .btn-container {
+            display: flex;
+            position: static;
+            width: 182px;
+            justify-content: space-between;
+        }
+        & .features-ul, & .company-ul{
+            background-color: var(--Almost-White);
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+            width: 153px;
+            border-radius: 10px;
+            height: 160px;
+            position: absolute;
+            padding: 18px 24px;
+            font-size: 0.875em;
+            display: none;
+            top: 30px;
+            & li {
+                margin-bottom: 16px;
+            }
+
+        }
+        & .company-ul-container, .features-ul-container {
+            position: relative;
+        }
+        & .features-ul {
+            left: -80px;
+        }
+        & #company-btn, #features-btn {
+            width: 95px;
+        }
+
+        & .company-ul {
+            left: -30px;
+        }
+        & .submenu {
+            margin: 0;
+        }
+        & .btnlog {
+            margin: 0;
+        }
+        & .btnreg {
+            width: 104px;
+        }
+    } 
+}
+    main {
+        & h2 {
+            font-size: 2.625em;
+        }
+        & p {
+            width: 600px;
+            font-size: 1.125em;
+            margin: 40px auto;
+        } 
+        & .learn {
+            width: 163px;
+            height: 56px;
+            font-size: 1.125em;
+            margin-bottom: 46px;
+            
+        }
+        & picture {
+            width: 80%;
+            margin: 24px auto;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        margin: 21px 40px 67px;
+        & nav {
+        margin-left: 48px;   
+        }
+    }
+    main {
+        flex-direction: row;
+        margin: 0 180px 20px 165px;
+        justify-content: space-between;
+        
+        & picture {
+            width: 500px;
+            margin: 0;
+        }
+        & h2 {
+            text-align: left;
+            font-size: 4.5em;
+            width: 510px;
+            margin: 100px 0 48px;
+        } p {
+            text-align: left;
+            font-size: 1.125em;
+            width: 425px;
+            font-weight: 500;
+            margin: 0 0 25px;
+            
+        }
+        & .learn {
+            margin: 0 0 116px;
+        }
+    }
+}

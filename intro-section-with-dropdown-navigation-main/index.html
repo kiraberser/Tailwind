@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+    <img src="images/icon-menu.svg" alt="menu" class="hamburger-menu" id="menu">
+    <nav id="navbar">
+      <div class="back"></div>
+      <div class="front">
+          <div class="close-container">
+            <img src="./images/icon-close-menu.svg" alt="close" id="close-btn">
+          </div>
+          <ul>
+            <li class="features-ul-container">
+              <button id="features-btn" class="submenu">
+                Features 
+                <img  id="features-btn-arrow" src="images/icon-arrow-down.svg" alt="arrow-down"></button> 
+              <ul class="features-ul" id="features-ul">
+                <li>
+                  <img src="images/icon-todo.svg" alt="todo">
+                  <span>Todo List</span>
+                </li>
+                <li>
+                  <img src="./images/icon-calendar.svg" alt="calendar">
+                  <span>Calendar</span>
+                </li>
+                <li>
+                  <img src="images/icon-reminders.svg" alt="reminders">
+                  <span>Reminders</span>
+                </li>
+                <li>
+                  <img src="./images/icon-planning.svg" alt="planning">
+                  <span>Planning</span>
+                </li>
+              </ul>
+            </li>
+            <li class="company-ul-container">
+              <button id="company-btn" class="submenu">Company<img  id="company-btn-arrow" src="images/icon-arrow-down.svg" alt="arrow-down"></button> 
+              <ul class="company-ul" id="company-ul">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+          <div class="btn-container">
+            <button class="btnlog">Login</button>
+            <button class="btnreg">Register</button>
+          </div>
+      </div>
+    </nav>
+  </header>
+</body>
+
+
+  <main>
+    <section>
+      <h2>Make remote work</h2>
+      <p>Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+        <button class="learn">Learn more</button>
+        <div class="logos-container">
+          <img class="data" src="./images/client-databiz.svg" alt="databiz-logo">
+          <img class="audio" src="images/client-audiophile.svg" alt="audiophile">
+          <img class="meet" src="images/client-meet.svg" alt="meet">
+          <img class="maker" src="images/client-maker.svg" alt="maker">
+        </div>
+    </section>
+    <picture>
+      <source srcset="./images/image-hero-mobile.png" media="(max-width: 1023px)">
+      <source srcset="./images/image-hero-desktop.png" media="(min-width:1024px)">
+      <img class="hero-image" src="./images/image-hero-mobile.png" alt="hero image"> 
+    </picture>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
